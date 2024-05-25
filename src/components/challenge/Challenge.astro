@@ -1,0 +1,26 @@
+---
+import Attribution from '../Attribution.astro';
+
+interface Challenge {
+  name: string;
+}
+
+import site from '../../data/site.json';
+const { challenge }: { challenge: Challenge } = site;
+---
+
+<div class="challenge">
+  <Attribution />
+</div>
+
+<style>
+  .challenge {
+    width: fit-content;
+    border: dotted var(--grey);
+    padding: 1em;
+    border-radius: 1em;
+    text-align: center;
+    margin-inline: auto;
+    margin-block-start: 2em;
+  }
+</style>

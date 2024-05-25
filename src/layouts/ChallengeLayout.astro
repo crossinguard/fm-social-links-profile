@@ -36,6 +36,7 @@ const { website, challenge }: { website: Website; challenge: Challenge } = site;
   </head>
 
   <body>
+    <h1 class="sr-only">{challenge.name}</h1>
     <main id="main-grid">
       <slot />
     </main>

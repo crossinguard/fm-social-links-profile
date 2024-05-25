@@ -3,9 +3,17 @@ import Image from 'astro/components/Image.astro';
 import Links from '../solution/Links.astro';
 import logo from '../../assets/images/crystal-logo.svg';
 
-const name = 'W. Brett Egbert';
-const location = 'Whatcom County, Washington';
-const about = '"mathematics educator, assessment specialist, web developer"';
+interface CardInfo {
+  name: string;
+  location: string;
+  about: string;
+}
+
+const { name, location, about }: CardInfo = {
+  name: 'W. Brett Egbert',
+  location: 'Whatcom County, Washington',
+  about: '"mathematics educator, assessment specialist, web developer"',
+};
 ---
 
 <div class="card">

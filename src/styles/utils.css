@@ -2,20 +2,20 @@
   display: grid;
   place-content: center;
 }
-.font-small {
-  font-size: 0.75rem;
-  font-size: clamp(0.75rem, 0.125rem + 3.125vw, 0.875rem);
+.heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.5;
 }
-.font-medium {
+.body-regular {
   font-size: 0.875rem;
-  font-size: clamp(0.875rem, 0.25rem + 3.125vw, 1rem);
+  font-weight: 400;
+  line-height: 1.5;
 }
-.font-large {
-  font-size: 1.25rem;
-  font-size: clamp(1.25rem, 0rem + 6.25vw, 1.5rem);
-}
-.bold {
-  font-weight: 800;
+.body-bold {
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.5;
 }
 .sr-only:not(:focus):not(:active) {
   clip: rect(0 0 0 0);

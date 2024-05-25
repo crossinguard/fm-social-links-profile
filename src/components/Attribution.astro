@@ -16,7 +16,7 @@ interface Website {
   url: string;
 }
 
-import site from '../data/site.json';
+import site from '../assets/data/site.json';
 const {
   challenge,
   solution,
@@ -54,10 +54,18 @@ const {
 
 <style>
   .attribution {
-    font-family: monospace;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 1em;
+    width: fit-content;
+    margin-inline: auto;
+    font-family: monospace;
+    border: dotted var(--grey);
+    padding: 1em;
+    border-radius: 1em;
+    margin-block-start: 2em;
 
     p {
       display: inline-block;
@@ -71,6 +79,7 @@ const {
       border-radius: 0.4rem;
       padding-inline: 0.4em;
       margin-block: 0.1rem;
+      transition: all var(--transition);
 
       &:hover {
         color: var(--secondary);

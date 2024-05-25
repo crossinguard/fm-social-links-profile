@@ -1,6 +1,5 @@
 ---
 import Footer from '../components/Footer.astro';
-import Challenge from '../components/challenge/Challenge.astro';
 
 import '../styles/reset.css';
 import '../styles/utils.css';
@@ -15,7 +14,7 @@ interface Challenge {
   name: string;
 }
 
-import site from '../data/site.json';
+import site from '../assets/data/site.json';
 const { website, challenge }: { website: Website; challenge: Challenge } = site;
 ---
 
@@ -38,13 +37,6 @@ const { website, challenge }: { website: Website; challenge: Challenge } = site;
 
   <body>
     <main id="main-grid">
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore quis
-        fugiat alias repellendus cum, eum mollitia est, ea possimus commodi
-        aspernatur quas perferendis error esse placeat quo culpa ratione! Eos
-        accusamus quae mollitia in saepe atque pariatur velit odio perferendis,
-        sit nam? Quis voluptatibus consequatur harum minima, est officia ipsum!
-      </p>
       <slot />
     </main>
     <Footer />
@@ -53,14 +45,11 @@ const { website, challenge }: { website: Website; challenge: Challenge } = site;
 
 <style>
   #main-grid {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: 100%;
-
-    /* fallback height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
-
-    /* new small viewport height for modern browsers */
     min-height: 100svh;
   }
 </style>
